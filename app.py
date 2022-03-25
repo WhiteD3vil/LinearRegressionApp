@@ -30,7 +30,7 @@ def main():
     result = ""
     if st.button("Predict"):
         result = predict_chance(GREScore,TOEFLScore,UniversityRanking,CGPA)
-    st.success(f"The chance of admission is {int(result[][])*100}%")
+    st.success(f"The chance of admission is {round(float(result[0][0])*100,2)}%")
 
 if __name__ == "__main__":
     main()
